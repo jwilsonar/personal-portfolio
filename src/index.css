@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'Mi fuente';
+  src: url('MagentaMonoline.otf') format('truetype'); /* Reemplaza 'ruta-a-tu-fuente.ttf' con la ruta correcta */
+  /* Otras propiedades opcionales, como font-weight, font-style, etc. */
+}
+:root {
+  font-family: 'Poppins', sans-serif;
+  
+  color: white;
+  font-size: 16px;
+}
+body{
+  background-color: #161616;
+  /*background-image: 
+    radial-gradient(circle at top right, rgba(55, 30, 59, 0.7) 1%, rgba(35,30,76,1) 10%, #161616 64%),
+    radial-gradient(circle at bottom left, rgba(55,30,59,1) 2%, rgba(35,30,76,1) 14%, #161616 64%);*/
+  background-repeat: no-repeat;
+  
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior:smooth;
+}
+button{
+  padding: .5rem 1rem;
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
+  font-weight:800;
+  border: 1px white solid;
+}
+.boton-principal{
+  background-color: white;
+  color: black;
+  transition: .3s;
+}
+.boton-principal:hover{
+  background-color: black;
+  color: white;
+}
+.boton-secundario{
+  background-color: black;
+  color: white;
+  transition: .3s;
+}
+.boton-secundario:hover{
+  background-color: white;
+  color: black;
+}
+section{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+h1::before{
+  content: '►';
+}
+a{
+  text-decoration: none;
+  color: white;
+}

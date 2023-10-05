@@ -1,0 +1,441 @@
+@import './styles.scss';
+#habilidades{
+    @include mobile{
+        padding: 0 1rem;
+    }
+    h1{
+        margin-bottom: 1rem;
+    }
+    height: 75vh;
+}
+
+/*==================== PORCENTAJE ====================*/
+.container-ph{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mobile{
+        width: 100px;
+        height: 100px;
+    }
+    .circular-ph{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #219BEE;
+        box-shadow: 0 0 40px #219BEE;
+        .contenido-ph{
+            width: 90%;
+            height: 90%;
+            border-radius: 50%;
+            background-color: #161616;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .porcentaje-ph{
+                font-size: 6rem;
+                @include mobile{
+                    font-size: 2.5rem;
+                }
+            }
+            .porcentaje-ph::after{
+                content: '%';
+                font-size: 1rem;
+            }
+            .nombre-ph{
+                position: absolute;
+                margin-top: 6rem;
+                @include mobile{
+                    display: none;
+                }
+            }
+        }
+        
+        
+    }
+}
+
+/*==================== LOGOS FLOTANTES ====================*/
+.mas-h{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    @include mobile{
+        flex-direction: column;
+    }
+    .mas-general-h{
+        width: 25%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        @include mobile{
+            flex-direction: row;
+        }
+    }
+    .mas-primero{
+        img{
+            height: 110px;
+            cursor: pointer;
+            transition: .3s;
+            @include mobile{
+                height: 50px;
+            }
+        }
+    }
+    .mas-tercero{
+        img{
+            height: 110px;
+            cursor: pointer;
+            transition: .3s;
+            @include mobile{
+                height: 50px;
+            }
+        }
+    }
+}
+.principal-h{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    img{
+        transition: filter .3s;
+        cursor: pointer ;
+    }
+    .container-h{
+        position: absolute;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px dashed rgba(127, 127, 127, 0.245);
+    }
+    .first-container{
+        height: 600px;
+        width: 600px;
+        img{
+            height: 100px;
+            width: 100px;
+            animation: first-rotation 30s linear infinite;
+            @include mobile{
+                height: 50px;
+                width: 50px;
+                animation: first-rotation-mobile 15s linear infinite;
+            }
+        }
+        @include mobile{
+            height: 300px;
+            width: 300px;
+        }
+    }
+    .second-container{
+        height: 550px;
+        width: 550px;
+        img{
+            height: 100px;
+            width: 100px;
+            animation: second-rotation 30s linear infinite;
+            @include mobile{
+                height: 50px;
+                width: 50px;
+                animation: second-rotation-mobile 15s linear infinite;
+            }
+        }
+        @include mobile{
+            height: 300px;
+            width: 300px;
+        }
+    }
+    .third-container{
+        height: 500px;
+        width: 500px;
+        img{
+            height: 100px;
+            width: 100px;
+            animation: third-rotation 30s linear infinite;
+            @include mobile{
+                height: 50px;
+                width: 50px;
+                animation: third-rotation-mobile 15s linear infinite;
+            }
+        }
+        @include mobile{
+            height: 300px;
+            width: 300px;
+        }
+    }
+    .fourth-container{
+        height: 450px;
+        width: 450px;
+        img{
+            height: 100px;
+            width: 100px;
+            animation: fourth-rotation 30s linear infinite;
+            @include mobile{
+                height: 50px;
+                width: 50px;
+                animation: fourth-rotation-mobile 10s linear infinite;
+            }
+        }
+        @include mobile{
+            height: 180px;
+            width: 180px;
+        }
+    }
+    .fiveth-container{
+        height: 400px;
+        width: 400px;
+        img{
+            height: 100px;
+            width: 100px;
+            animation: fiveth-rotation 30s linear infinite;
+            @include mobile{
+                height: 50px;
+                width: 50px;
+                animation: fiveth-rotation-mobile 10s linear infinite;
+            }
+        }
+        @include mobile{
+            height: 180px;
+            width: 180px;
+        }
+    }
+    .sixth-container{
+        height: 350px;
+        width: 350px;
+        img{
+            height: 70px;
+            width: 70px;
+            animation: sixth-rotation 30s linear infinite;
+            @include mobile{
+                height: 40px;
+                width: 40px;
+                animation: sixth-rotation-mobile 10s linear infinite;
+            }
+        }
+        @include mobile{
+            height: 180px;
+            width: 180px;
+        }
+    }
+}
+
+/*==================== hover:logos ====================*/
+.logo-html:hover {
+    filter: drop-shadow(0 0 2em #ED8B01);
+}
+.logo-css:hover {
+    filter: drop-shadow(0 0 2em #219BEE);
+}
+.logo-react:hover {
+    filter: drop-shadow(0 0 2em #219BEE);
+}
+.logo-c:hover {
+    filter: drop-shadow(0 0 2em #545DC8);
+}
+.logo-python:hover {
+    filter: drop-shadow(0 0 2em #545DC8);
+}
+.logo-node:hover {
+    filter: drop-shadow(0 0 2em #E9CA32);
+}
+.logo-nodeN:hover {
+    filter: drop-shadow(0 0 2em #21A366);
+}
+.logo-figma:hover {
+    filter: drop-shadow(0 0 2em #A341CC);
+}
+.logo-visual:hover {
+    filter: drop-shadow(0 0 2em #1EB4F6);
+}
+.logo-sql:hover {
+    filter: drop-shadow(0 0 2em #216287);
+}
+.logo-boot:hover {
+    filter: drop-shadow(0 0 2em #6C19FF);
+}
+.logo-redux:hover {
+    filter: drop-shadow(0 0 2em #7E57C2);
+}
+
+/*==================== ANIMACIONES:LOGOS ====================*/
+
+@keyframes first-rotation{
+    0%{
+        transform: rotate(20deg) translate(300px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(380deg) translate(300px) rotate(360deg);
+    }
+}
+@keyframes first-rotation-mobile{
+    0%{
+        transform: rotate(20deg) translate(150px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(380deg) translate(150px) rotate(360deg);
+    }
+}
+@keyframes second-rotation{
+    0%{
+        transform: rotate(50deg) translate(275px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(410deg) translate(275px) rotate(360deg);
+    }
+}
+@keyframes second-rotation-mobile{
+    0%{
+        transform: rotate(70deg) translate(150px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(430deg) translate(150px) rotate(360deg);
+    }
+}
+@keyframes third-rotation{
+    0%{
+        transform: rotate(80deg) translate(250px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(440deg) translate(250px) rotate(360deg);
+    }
+}
+@keyframes third-rotation-mobile{
+    0%{
+        transform: rotate(120deg) translate(150px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(480deg) translate(150px) rotate(360deg);
+    }
+}
+@keyframes fourth-rotation{
+    0%{
+        transform: rotate(110deg) translate(225px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(470deg) translate(225px) rotate(360deg);
+    }
+}
+@keyframes fourth-rotation-mobile{
+    0%{
+        transform: rotate(170deg) translate(90px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(530deg) translate(90px) rotate(360deg);
+    }
+}
+@keyframes fiveth-rotation{
+    0%{
+        transform: rotate(140deg) translate(200px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(500deg) translate(200px) rotate(360deg);
+    }
+}
+@keyframes fiveth-rotation-mobile{
+    0%{
+        transform: rotate(220deg) translate(90px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(580deg) translate(90px) rotate(360deg);
+    }
+}
+@keyframes sixth-rotation{
+    0%{
+        transform: rotate(170deg) translate(175px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(530deg) translate(175px) rotate(360deg);
+    }
+}
+@keyframes sixth-rotation-mobile{
+    0%{
+        transform: rotate(270deg) translate(90px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(630deg) translate(90px) rotate(360deg);
+    }
+}
+/*
+.contenedor-h{
+    position: relative;
+    animation: wheel 40s linear infinite;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    cursor: pointer;
+    /*div{
+        height: 500px;
+        width: 500px;
+        border-radius: 50%;
+        background-color: white;
+    }
+    img{
+        will-change: filter;
+        transition: filter 300ms;
+    }
+    .cabin {
+        
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        animation: cabins 80s linear infinite;
+    }
+    .cabin:nth-of-type(1) {
+        right: -2%;
+        top: 40%;
+    }
+    .logo-html:hover {
+        filter: drop-shadow(0 0 2em #ED8B01);
+    }
+    .cabin:nth-of-type(2) {
+        right: 17%;
+        top: 80%;
+    }
+    .logo-css:hover {
+        filter: drop-shadow(0 0 2em #219BEE);
+    }
+    .logo-react:hover {
+        filter: drop-shadow(0 0 2em #219BEE);
+    }
+    .logo-c:hover {
+        filter: drop-shadow(0 0 2em #545DC8);
+    }
+    .logo-python:hover {
+        filter: drop-shadow(0 0 2em #545DC8);
+    }
+    .logo-node:hover {
+        filter: drop-shadow(0 0 2em #21A366);
+    }
+    @keyframes wheel {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes cabins {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}*/

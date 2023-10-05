@@ -1,0 +1,173 @@
+@import './styles.scss';
+#inicio{
+    @include desktop{
+        padding-top: 80px;
+    }
+    @include tablet{
+        padding-top: 80px;
+    }
+    
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.contenedor-p{
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 75%;
+    @include mobile{
+        flex-direction: column;
+        height: 76vh;
+    }
+    @include tablet{
+        flex-direction: column;
+        height: 50vh;
+    }
+    .info-p{
+        width: 50%;
+        padding: 2rem 0 0 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include mobile{
+            width: 100%;
+            padding: 1rem;
+            
+        }
+        @include tablet{
+            width: 95%;
+            gap: 15px;
+        }
+        h1{
+            font-size: 1rem;
+        }
+        .nameCursiva{
+            font-family: 'Mi fuente';
+            font-size: 4.5rem;            
+        }
+        .pequenio{
+            font-size: .75rem;
+            color: rgba(255, 255, 255,0.75);
+        }
+        .botones-p{
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            @include mobile{
+                justify-content: center;
+            }
+            button:first-child{
+                a{
+                    color: black;
+                }
+                a:hover{
+                    color: white;
+                }
+            }
+        }
+        .descripcion-p{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            text-align: justify;
+        }
+        .social-networks{
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            @include mobile{
+                width: 100%;
+            }
+            @include tablet{
+                width: 25%;
+            }
+            a{
+                color: rgb(130, 130, 130);
+                transition: .3s;
+            }
+            a:hover{
+                color: white;
+            }
+        }
+    }
+    .imagen-p{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+        
+        @include tablet{
+            width: 5%;
+        }
+        @include mobile{
+            width: 100%;
+            position: absolute;
+            overflow: hidden;
+            justify-content:flex-start;
+            align-items: start;
+        }        
+        img{
+            height: 60%;
+            width: 60%;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: filter .5s;
+            @include mobile(){
+                width: 100%;
+                top: 0%;
+                left: 50%;
+                z-index: -1;
+                opacity: 0.2;
+                position: relative;
+            }
+            @include tablet(){
+                z-index: -1;
+                height: 50%;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                opacity: 0.5;
+            }
+        }
+        img:hover{
+            filter: drop-shadow(0 0 2em #ffc83e);
+        }
+        
+        
+    }
+    
+}
+.frase-p{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    @include mobile{
+        padding: 1rem;
+    }
+    p{
+        font-size: 1rem;
+        font-style: italic;
+        font-weight: lighter;
+        text-align: right;
+        span{
+            font-size: 0.7rem;
+            font-style: normal;
+            font-weight: normal;
+        }
+    }
+    
+}
